@@ -15,6 +15,18 @@ namespace BeginGeneryc
         {
             return $"Name: {Name}\t Phone: {Phone}";
         }
+
+        public override bool Equals(object obj)
+        {
+            if(obj == null) return false;
+            if (obj is Contact)
+            {
+                var contact = obj as Contact;
+                return contact.Phone == this.Phone;
+
+            }
+            return false;
+        }
     }
     
 }

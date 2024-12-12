@@ -39,8 +39,14 @@ namespace BeginGeneryc
                 Console.WriteLine(contact);
             }
 
-            
-            
+            contacts.Remove(new Contact { Phone = "+38(096) 98 12 315" });
+
+            Console.WriteLine("Remove +38(096) 98 12 315");
+            foreach (Contact contact in contacts)
+            {
+                Console.WriteLine(contact);
+            }
+
         }
     }
 }
